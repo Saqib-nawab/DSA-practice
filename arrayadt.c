@@ -44,6 +44,8 @@ void setVal(struct myArray *a)
 // Main function
 int main()
 {
+
+    printf("We are running setVal now\n");
     // Creating an instance of myArray struct named marks
     struct myArray marks;
     // Creating an array with total size 10 and used size 2
