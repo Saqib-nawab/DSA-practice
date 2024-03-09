@@ -68,5 +68,26 @@ int main()
     sp->arr = (int *)malloc(sp->size * sizeof(int));
     printf("Stack has been created successfully\n");
 
+    printf("Before pushing, Full: %d\n", isFull(sp));
+    printf("Before pushing, Empty: %d\n", isEmpty(sp));
+
+    push(sp, 1);
+    push(sp, 23);
+    push(sp, 99);
+    push(sp, 75);
+    push(sp, 3);
+    push(sp, 64);
+    push(sp, 57);
+    push(sp, 46);
+    push(sp, 89);
+    push(sp, 6); // ---> Pushed 10 values
+    // push(sp, 46); // Stack Overflow since the size of the stack is 10
+    printf("After pushing, Full: %d\n", isFull(sp));
+    printf("After pushing, Empty: %d\n", isEmpty(sp));
+
+    printf("Popped %d from the stack\n", pop(sp)); // --> Last in first out!
+    printf("Popped %d from the stack\n", pop(sp)); // --> Last in first out!
+    printf("Popped %d from the stack\n", pop(sp)); // --> Last in first out!
+
     return 0;
 }
