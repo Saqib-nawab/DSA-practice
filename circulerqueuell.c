@@ -75,4 +75,3 @@ int main()
     linkedListTraversal(f);
     return 0;
 }
-s
