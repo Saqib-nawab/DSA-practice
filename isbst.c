@@ -70,6 +70,26 @@ int isBST(struct node *root)
     }
 }
 
+struct node *search(struct node *root, int key)
+{
+    if (root == NULL)
+    {
+        return NULL;
+    }
+    if (key == root->data)
+    {
+        return root;
+    }
+    else if (key < root->data)
+    {
+        return search(root->left, key);
+    }
+    else
+    {
+        return search(root->right, key);
+    }
+}
+
 int main()
 {
 
@@ -106,6 +126,16 @@ int main()
     else
     {
         printf("This is not a bst");
+    }
+
+    struct node *n = search(p, 10);
+    if (n != NULL)
+    {
+        printf("Found: %d", n->data);
+    }
+    else
+    {
+        printf("Element not found");
     }
     return 0;
 }
